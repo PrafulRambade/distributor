@@ -214,11 +214,11 @@
                     <div class="col-sm-12 mb-3 mt-3 mb-sm-0" style="margin-top:0px !important">
                         <div class="row">
                             <div class="col-sm-4 mb-3 mt-3 mb-sm-0">
-                                <span style="color:red;">*</span>Payment Type</label>
-                                <select class="form-control form-control-payment @error('status') is-invalid @enderror" name="status">
-                                    <option>Select Payment Type</option>
-                                    <option value="1">Cheque</option>
-                                    <option value="2">NEFT</option>
+                                <span style="color:red;">*</span>Product</label>
+                                <select class="form-control form-control-product @error('status') is-invalid @enderror" name="status">
+                                    <option>Select Product</option>
+                                    <option value="1">product1</option>
+                                    <option value="2">Product2</option>
                                 </select>
                                 @error('status')
                                     <span class="text-danger">{{$message}}</span>

@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-university"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Tech-Admin</div>
+        <div class="sidebar-brand-text mx-3">My App</div>
     </a>
 
     <!-- Divider -->
@@ -32,6 +32,25 @@
             aria-expanded="true" aria-controls="taTpDropDown">
             <i class="fas fa-user-alt"></i>
             <span>Distributor Management</span>
+        </a>
+        <div id="taTpDropDownDistr" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Distributor Management:</h6>
+                <a class="collapse-item" href="{{ route('distributor.index') }}">List</a>
+                <a class="collapse-item" href="{{ route('distributor.create') }}">Add New</a>
+                {{-- <a class="collapse-item" href="">Import Data</a> --}}
+            </div>
+        </div>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#taTpDropDownDistr"
+            aria-expanded="true" aria-controls="taTpDropDown">
+            <i class="fas fa-user-alt"></i>
+            <span>Sales Management</span>
         </a>
         <div id="taTpDropDownDistr" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
