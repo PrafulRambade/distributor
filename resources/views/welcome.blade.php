@@ -130,3 +130,18 @@
         </div>
     </body>
 </html>
+SELECT
+  dlm.id as id,
+  dlm.dealer_name,
+  group_concat(dm.distributor_name),
+  cm.name as country_name,
+  sm.name as state_name,
+  dsm.name as district_name
+FROM dealer_master dlm
+JOIN dealer_distributor_mapping AS ddm ON dlm.id = ddm.delaer_id 
+JOIN distributor_master AS dm          ON ddm.distributor_id = dm.id
+JOIN country_master as cm              ON dlm.d_country_id = cm.id
+JOIN state_master as sm                ON dlm.d_state_id = sm.id
+JOIN district_master as dsm            ON dlm.d_district_id = dsm.id
+WHERE dlm.dealer_status = 'NEW'
+group by dlm.id, dlm.dealer_name, cm.name, sm.name, dsm.name;
